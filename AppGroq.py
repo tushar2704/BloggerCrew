@@ -1,4 +1,6 @@
-
+##© 2024 Tushar Aggarwal. All rights reserved.(https://tushar-aggarwal.com)
+##BloggerCrew -Live Session with Tushar
+##################################################################################################
 import os
 from dotenv import load_dotenv
 from BlogCrewAI import Agent, Task, Crew
