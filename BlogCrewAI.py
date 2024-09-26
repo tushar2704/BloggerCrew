@@ -1,7 +1,7 @@
 # Importing dependencies
 import os
 from dotenv import load_dotenv
-from crewai import Agent, Task, Crew
+from BlogCrewAI import Agent, Task, Crew
 from langchain_groq import ChatGroq
 from IPython.display import Markdown
 
@@ -85,6 +85,7 @@ def create_crew(agents, tasks):
         verbose=2
     )
 
+
 def main():
     """
     Main function to orchestrate the content creation process.
@@ -137,9 +138,11 @@ def main():
         editor
     )
 
+#######################################################
+
     crew = create_crew([planner, writer, editor], [plan_task, write_task, edit_task])
 
-    result = crew.kickoff(inputs={"topic": "Artificial Intelligence"})
+    result = crew.kickoff(inputs={"topic": "US Election 2024"})
     return Markdown(result)
 
 if __name__ == "__main__":
